@@ -1,5 +1,11 @@
 // gsap.from("img", {x: 800, y: 400, duration: 3, rotation: 360,  repeat: -1, yoyo: true});
 
+let path = document.querySelectorAll('#logo path');
+console.log(path)
+for (let i = 0; i < path.length; i++) {
+    console.log(`path ${i}: ${path[i].getTotalLength()}`)
+}
+
 gsap.timeline()
     .from('#input', { opacity: 1, duration: 0.5 })
     .from('#text', { y: 160, duration: 1 })
